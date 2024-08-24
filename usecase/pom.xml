@@ -10,6 +10,11 @@
     </parent>
 
     <artifactId>usecase</artifactId>
-
-
+    <dependencies>
+        <dependency>
+            <groupId>com.entropia</groupId>
+            <artifactId>core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

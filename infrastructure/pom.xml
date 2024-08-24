@@ -10,6 +10,21 @@
     </parent>
 
     <artifactId>infrastructure</artifactId>
-
-
+    <dependencies>
+        <dependency>
+            <groupId>com.entropia</groupId>
+            <artifactId>core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.entropia</groupId>
+            <artifactId>usecase</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.entropia</groupId>
+            <artifactId>application</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
