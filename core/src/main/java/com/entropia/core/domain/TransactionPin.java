@@ -1,5 +1,8 @@
 package com.entropia.core.domain;
 
+import com.entropia.core.exception.TransectionPinException;
+import com.entropia.core.exception.enums.ErrorCodeEnum;
+
 import java.time.LocalDateTime;
 
 public class TransactionPin {
@@ -53,14 +56,14 @@ public class TransactionPin {
         return pin;
     }
 
-    public void setPin(String pin) {
+    public void setPin(String pin) throws TransectionPinException {
         pinIsValid(pin);
         this.pin = pin;
     }
 
-    private void pinIsValid(String pin){
+    private void pinIsValid(String pin) throws TransectionPinException {
         if (pin.length() != 8){
-            throw
+            throw new TransectionPinException(ErrorCodeEnum.TRP0001.getMessage(), ErrorCodeEnum.TRP0001.getCode());
         }
     }
 

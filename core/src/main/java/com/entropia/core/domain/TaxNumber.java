@@ -1,5 +1,8 @@
 package com.entropia.core.domain;
 
+import com.entropia.core.exception.TaxNumberException;
+import com.entropia.core.exception.enums.ErrorCodeEnum;
+
 public class TaxNumber {
 
     private String value;

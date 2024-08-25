@@ -1,6 +1,8 @@
 package com.entropia.core.domain;
 
 import com.entropia.core.domain.enums.UserTypeEnum;
+import com.entropia.core.exception.TransferException;
+import com.entropia.core.exception.enums.ErrorCodeEnum;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -47,14 +49,14 @@ public class Wallet {
         this.balance.add(value);
     }
 
-    public void  transfer(BigDecimal value){
+    public void  transfer(BigDecimal value) throws TransferException {
 
         if (this.user.getType() == UserTypeEnum.SHOPKEEPER){
-           throw
+           throw new TransferException(ErrorCodeEnum.TR0001.getMessage(), ErrorCodeEnum.TR0001.getCode());
         }
 
         if (this.balance.compareTo(value) < 0){
-            throw
+            throw new TransferException(ErrorCodeEnum.TR0002.getMessage(), ErrorCodeEnum.TR0002.getCode());
         }
 
         this.balance.subtract(value);
