@@ -19,8 +19,10 @@ Ex. na classe TaxNumber, está toda a lógica - inclusive matemática - em java 
    A classe Wallet dentro de core/domain também carrega consigo regras de negócio, como Keepshoppers não podem tranferir valores para Usuarios(um vendedor não transfere dinheiro para um comprador). 
 
    em TransactionPin tambem foi feita a validação se a senha contem mais que 8 digitos
+<hr>
+### Modulo Use Cases
 
-
-
+   Nesse módulo criaremos as interfaces dos casos de uso, sempre em codigo java puro, as implementações ficaram a cargo de outros modulos 
+   * Foram feitos 9 interfaces para casos de uso no pacote useCase do modulo usecase
 
 
